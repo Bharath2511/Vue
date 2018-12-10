@@ -1,32 +1,12 @@
 new Vue({
   el: "#vue-app",
-  data: {
-    title: "Vue",
-    type: "FrameWork",
-    age: 23,
-    X: 0,
-    Y: 0,
-    website: "http://www.google.com",
-    WebsiteTag: '<a href="http://www.google.com">Google</a>'
-  },
+  data: {},
   methods: {
-    greet: function(day) {
-      return `legday ${day} ${this.title}`;
+    logName: function() {
+      console.log("you entered your name");
     },
-    add: function(inc) {
-      this.age += inc;
-    },
-    subtract: function(dec) {
-      this.age -= dec;
-    },
-    //we get this automatically. We dont have to explicitly say it
-    updateXY: function(event) {
-      //console.log(event);
-      this.X = event.offsetX;
-      this.Y = event.offsetY;
-    },
-    click: function() {
-      alert("You Clicked Me");
+    logAge: function() {
+      console.log("you entered your age");
     }
   }
 });
