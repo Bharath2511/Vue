@@ -1,0 +1,34 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://unpkg.com/vue"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <div id="vue-app">
+        <p>{{greet('Monday')}}</p>
+        <h1>{{title}}</h1>
+        <p>{{type}}</p>
+        <!-- a directive which tells vue js to do something -->
+        <a :href="website">Google</a>
+        <input type="text" :value="title" />
+        <p v-html="WebsiteTag"></p>
+        <button @click.once="add(1)">Add an Year</button>
+        <button v-on:click="subtract(1)">Subtract an Year</button>
+        <button @dblclick="add(10)">Add 10 Years</button>
+        <button v-on:dblclick="subtract(10)">Subtract 10 Years</button>
+
+        <p>My age is {{age}}</p>
+        <div id="canvas" v-on:mousemove="updateXY">{{X}},{{Y}}</div>
+        <a v-on:click.prevent="click" href="http://www.google.com">The Google</a>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
